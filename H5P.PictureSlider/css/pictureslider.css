@@ -1,0 +1,23 @@
+/* 
+    Document   : Picture Slider
+    Created on : Feb 28, 2013, 9:56:47 PM
+    Author     : griffen
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.picture-slider {
+    color: #000066;
+}
+
+.slides_container {
+    width:570px;
+    height:270px;
+}
+
+.slides_container div {
+    width:570px;
+    height:270px;
+    display:block;
+}
+        

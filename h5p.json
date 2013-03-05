@@ -1,0 +1,17 @@
+{
+  "title": "Picture Slider",
+  "contentType": "test",
+  "utilization": "Picture slider for H5P",
+  "language": "nb",
+  "author": "Gunhild Griff With",
+  "license": "cc-by-sa",
+  "mainLibrary": "H5P.PictureSlider",
+  "preloadedDependencies": [
+    {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0},
+    {"machineName": "Slides-SlidesJS-1", "majorVersion": 1, "minorVersion": 0}  
+  ],
+  "init": "H5P.PictureSlider",
+  "embedTypes": ["div", "iframe"],
+  "w": 635,
+  "h": 500
+}

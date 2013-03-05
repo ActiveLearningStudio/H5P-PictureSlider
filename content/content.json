@@ -1,0 +1,15 @@
+{
+  "title": "Picture Slider",
+  "width": 635,
+  "height": 500,
+  "Slider": [
+    {"title": "Image 1", 
+     "path": "image/1.jpg"},
+    {"title": "Image 2", 
+     "path": "image/2.jpg"},
+    {"title": "Image 3", 
+     "path": "image/3.jpg"},
+    {"title": "Image 4", 
+     "path": "image/4.jpg"}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Picture slider!",
+  "description": "Simple picture slider H5P",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "machineName": "H5P.PictureSlider",
+  "author": "Gunhild Griff With",
+  "license": "cc-by-sa",
+  "preloadedCss": [
+    {"path": "css/pictureslider.css"}
+  ],
+  "preloadedJs": [
+    {"path": "js/pictureslider.js"}
+  ],
+  "w": 635,
+  "h": 500
+}
