@@ -1,8 +1,7 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/*
+ * 
+ * Init a H5P object
  */
-
 var H5P = H5P || {};
 
 /**
@@ -19,7 +18,8 @@ H5P.PictureSlider = function(params, contentId) {
         return H5P.PictureSlider(params, contentId);
     
   // Get the newest jquery from H5P
-  var $ = H5P.jQuery; 
+  var $ = H5P.jQuery;
+  // Making a shorcut path to the content
   var cp = H5P.getContentPath(contentId);
   
   var $myDom;
@@ -45,12 +45,9 @@ H5P.PictureSlider = function(params, contentId) {
 
     // Set event listeners.
     // Add Slider
-    
     var slide = new MakeSlider($myDom, params.Slider);
     
-    
-    
-      return this;    
+    return this;    
   };
   
   // An internal Object only available to Picture Slider
@@ -60,21 +57,29 @@ H5P.PictureSlider = function(params, contentId) {
         "image": "",
         "action": ""
       }
-      
+            
       var params = $.extend({}, defaults, slider_params);
       
       // Render Slider DOM elements
-      var $slider = $('<div id="slides"></div>');
-      var $slidercontainer = $('<div class="slides_container"></div>');
+      var $slider = $('<div id="s3slider"></div>');
+      var $slidercontainer = $('<ul id="s3sliderContent"></ul>');
       $slider.append($slidercontainer);      
       for(var i=0; i<slider_params.length; i++){
-        $slidercontainer.append($('<div class="slides_img"><img src="' + cp+slider_params[i].path + '" width="300"/></div>'));
+        $slidercontainer.append($('<li class="s3sliderImage"><img src="' + cp+slider_params[i].path + '" width="300"/><span>Your text comes here</span></li>'));
       }
+      $slidercontainer.append($('<div class="clear s3sliderImage"></div>'));
       
      // Insert DOM in Picture Slider
       $(".picture-slider", dom).append($slider);
-            
-      $("#slides").slides();     
+      
+      /*
+       * S3Slider
+       * 
+       *  timeOut: Set the duration of how long will one picture be shown on the page (value is in miliseconds)
+       */
+      $('#s3slider').s3Slider({
+        timeOut: 4000
+      });   
       
       //TODO: add actions
       

@@ -1,0 +1,14 @@
+{
+  "title": "S3Slider",
+  "contentType": "library",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 0,
+  "machineName": "S3Slider",
+  "author": "XXX XXX",
+  "license": "cc-by-nc-sa",
+  "preloadedJs": [
+    {"path": "js/s3SliderPacked.js"}
+  ]
+}
