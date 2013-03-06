@@ -6,7 +6,7 @@
   "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.PictureSlider",
-  "author": "Gunhild Griff With",
+  "author": "griffen",
   "license": "cc-by-sa",
   "preloadedCss": [
     {"path": "css/pictureslider.css"}

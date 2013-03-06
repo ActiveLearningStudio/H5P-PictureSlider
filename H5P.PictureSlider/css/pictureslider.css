@@ -11,64 +11,67 @@
 }
 
 /*
-    Slides - Slides
+    CarouFredSel
 */
-
-.slides_container {
-    width:570px;
-    height:270px;
+.html_carousel {
+	padding: 15px 0 15px 40px;
 }
-
-.slides_container div {
-    width:570px;
-    height:270px;
-    display:block;
+.html_carousel div.slide {
+	position: relative;
 }
-
-/*
-    S3Slider
-*/
-#s3slider {
-    width: 400px; /* important to be same as image width */
-    height: 300px; /* important to be same as image height */
-    position: relative; /* important */
-    overflow: hidden; /* important */
+.html_carousel div.slide div {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	display: none;
+	position: absolute;
+	bottom: 0;
 }
- 
-#s3sliderContent {
-    width: 400px; /* important to be same as image width or wider */
-    position: absolute; /* important */
-    top: 0; /* important */
-    margin-left: 0; /* important */
+.html_carousel div.slide h4 {
+	font-size: 35px;
+	padding: 30px 0 0 100px;
 }
- 
-.s3sliderImage {
-    float: left; /* important */
-    position: relative; /* important */
-    display: none; /* important */
+.html_carousel div.slide p {
+	font-size: 16px;
+	padding: 0 0 30px 100px;
 }
- 
-.s3sliderImage span {
-    position: absolute; /* important */
-    left: 0;
-    font: 10px/15px Arial, Helvetica, sans-serif;
-    padding: 10px 13px;
-    width: 374px;
-    background-color: #000;
-    filter: alpha(opacity=70); /* here you can set the opacity of box with text */
-    -moz-opacity: 0.7; /* here you can set the opacity of box with text */
-    -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
-    opacity: 0.7; /* here you can set the opacity of box with text */
-    color: #fff;
-    display: none; /* important */
-    top: 0; /*
-        if you put top: 0;  -> the box with text will be shown 
-                                at the top of the image
-        if you put bottom: 0;  -> the box with text will be shown 
-                                at the bottom of the image
-    */
+.html_carousel div.slide h4, .html_carousel div.slide p {
+	color: white;
+	margin: 0;
 }
- 
-.clear {
-    clear: both;
+.image_carousel {
+	padding: 15px 0 15px 40px;
+}
+.image_carousel img {
+	border: 1px solid #ccc;
+	background-color: white;
+	padding: 9px;
+	margin: 7px;
+	display: block;
+	float: left;
+}
+.list_carousel {
+	padding: 15px 0 15px 40px;
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	font-size: 30px;
+	color: #666;
+	text-align: center;
+	background-color: #f0f0f0;
+	border: 5px solid #ccc;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin: 6px;
+	display: block;
+	float: left;
+}
+.clearfix {
+	float: none;
+	clear: both;
 }

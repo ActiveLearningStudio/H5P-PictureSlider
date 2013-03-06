@@ -3,12 +3,12 @@
   "contentType": "test",
   "utilization": "Picture slider for H5P",
   "language": "nb",
-  "author": "Gunhild Griff With",
+  "author": "griffen",
   "license": "cc-by-sa",
   "mainLibrary": "H5P.PictureSlider",
   "preloadedDependencies": [
     {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0},
-    {"machineName": "S3Slider", "majorVersion": 1, "minorVersion": 0}
+    {"machineName": "carouFredSel-6.2.0", "majorVersion": 1, "minorVersion": 0}
   ],
   "init": "H5P.PictureSlider",
   "embedTypes": ["div", "iframe"],

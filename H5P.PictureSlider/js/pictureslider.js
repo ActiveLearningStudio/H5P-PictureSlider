@@ -61,26 +61,53 @@ H5P.PictureSlider = function(params, contentId) {
       var params = $.extend({}, defaults, slider_params);
       
       // Render Slider DOM elements
-      var $slider = $('<div id="s3slider"></div>');
-      var $slidercontainer = $('<ul id="s3sliderContent"></ul>');
-      $slider.append($slidercontainer);      
-      for(var i=0; i<slider_params.length; i++){
-        $slidercontainer.append($('<li class="s3sliderImage"><img src="' + cp+slider_params[i].path + '" width="400"/><span>'+slider_params[i].text+'</span></li>'));
+      var $slider = $('<div class="'+slider_params[0].SliderType+'"></div>');
+      if(slider_params[0].SliderType == "html_carousel"){
+        var $slidercontainer = $('<div id="slidercontainer"></div>');
+        $slider.append($slidercontainer);      
+        for(var i=0; i<slider_params[0].Images.length; i++){
+            $slidercontainer.append($('<div class="slide"><img src="' + cp+slider_params[0].Images[i].path + '" width="'+slider_params[0].Images[i].width+'"/><div><h4>'+slider_params[0].Images[i].header+'</h4><p>'+slider_params[0].Images[i].text+'</p></div></div>'));
+        }
+      } else if(slider_params[0].SliderType == "image_carousel"){
+        var $slidercontainer = $('<div id="slidercontainer"></div>');
+        $slider.append($slidercontainer);      
+        for(var i=0; i<slider_params[0].Images.length; i++){
+            $slidercontainer.append($('<img src="' + cp+slider_params[0].Images[i].path + '" width="'+slider_params[0].Images[i].width+'"/>'));
+        }
+      } else if(slider_params[0].SliderType == "list_carousel"){
+        var $slidercontainer = $('<ul id="slidercontainer"></ul>');
+        $slider.append($slidercontainer);      
+        for(var i=0; i<slider_params[0].Images.length; i++){
+            $slidercontainer.append($('<li><img src="' + cp+slider_params[0].Images[i].path + '" width="'+slider_params[0].Images[i].width+'"/><div></li>'));
+        }
       }
-      $slidercontainer.append($('<div class="clear s3sliderImage"></div>'));
+      $slidercontainer.append($('<div class="clearfix"></div>'));
       
      // Insert DOM in Picture Slider
       $(".picture-slider", dom).append($slider);
       
-      /*
-       * S3Slider
-       * 
-       *  timeOut: Set the duration of how long will one picture be shown on the page (value is in miliseconds)
-      */ 
+      
      $(function(){
-        $('#s3slider').s3Slider({
-            timeOut: 4000
-        });
+        $("#slidercontainer").carouFredSel({
+	items 		: slider_params[0].items,
+	direction	: slider_params[0].directions,
+        circular        : slider_params[0].circular,
+        width           : slider_params[0].width, 
+        height          : slider_params[0].height,
+        responsive      : slider_params[0].responsive,
+        align           : slider_params[0].align,
+        padding         : slider_params[0].padding,
+        pagination      :slider_params[0].pagination,
+	auto : {
+		easing		: slider_params[0].auto.easing,
+		duration	: slider_params[0].duration,
+		timeoutDuration: slider_params[0].timeoutDuration,
+		pauseOnHover: slider_params[0].pauseOnHover
+	}
+        }).find(".slide").hover(
+                function() { $(this).find("div").slideDown(); },
+                function() { $(this).find("div").slideUp();	}
+        );
      });
             
       //TODO: add actions
