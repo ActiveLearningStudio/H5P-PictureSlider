@@ -9,6 +9,6 @@
   "author": "XXX XXX",
   "license": "cc-by-nc-sa",
   "preloadedJs": [
-    {"path": "js/s3SliderPacked.js"}
+    {"path": "js/s3Slider.js"}
   ]
 }

@@ -65,7 +65,7 @@ H5P.PictureSlider = function(params, contentId) {
       var $slidercontainer = $('<ul id="s3sliderContent"></ul>');
       $slider.append($slidercontainer);      
       for(var i=0; i<slider_params.length; i++){
-        $slidercontainer.append($('<li class="s3sliderImage"><img src="' + cp+slider_params[i].path + '" width="300"/><span>Your text comes here</span></li>'));
+        $slidercontainer.append($('<li class="s3sliderImage"><img src="' + cp+slider_params[i].path + '" width="400"/><span>'+slider_params[i].text+'</span></li>'));
       }
       $slidercontainer.append($('<div class="clear s3sliderImage"></div>'));
       
@@ -76,11 +76,13 @@ H5P.PictureSlider = function(params, contentId) {
        * S3Slider
        * 
        *  timeOut: Set the duration of how long will one picture be shown on the page (value is in miliseconds)
-       */
-      $('#s3slider').s3Slider({
-        timeOut: 4000
-      });   
-      
+      */ 
+     $(function(){
+        $('#s3slider').s3Slider({
+            timeOut: 4000
+        });
+     });
+            
       //TODO: add actions
       
           

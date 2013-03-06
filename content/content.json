@@ -4,12 +4,16 @@
   "height": 500,
   "Slider": [
     {"title": "Image 1", 
-     "path": "image/1.jpg"},
+     "path": "image/1.jpg",
+     "text": "Tiril baker boller"},
     {"title": "Image 2", 
-     "path": "image/2.jpg"},
+     "path": "image/2.jpg",
+     "text": "Tiril i NL"},
     {"title": "Image 3", 
-     "path": "image/3.jpg"},
+     "path": "image/3.jpg",
+     "text": "WW2 KKN"},
     {"title": "Image 4", 
-     "path": "image/4.jpg"}
+     "path": "image/4.jpg",
+     "text": "WW2 KKN4"}
   ]
 }

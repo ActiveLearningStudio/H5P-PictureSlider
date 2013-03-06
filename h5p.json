@@ -8,7 +8,6 @@
   "mainLibrary": "H5P.PictureSlider",
   "preloadedDependencies": [
     {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0},
-    {"machineName": "Slides-SlidesJS-1", "majorVersion": 1, "minorVersion": 0},
     {"machineName": "S3Slider", "majorVersion": 1, "minorVersion": 0}
   ],
   "init": "H5P.PictureSlider",
