@@ -1,0 +1,54 @@
+[
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Picture Slider",
+        "description": "Picture Slider title"
+    },
+    {
+        "name": "SliderType",
+        "type": "text",
+        "label": "Type of slider",
+        "description": "Type of slider (html_carousel)."
+    },
+    {
+        "name": "images",
+        "type": "list",
+        "label": "Images",
+        "entity": "image",
+        "description": "List of images in the picture slider.",
+        "min": 1,
+        "max": 9,
+        "field": {
+            "name": "image",
+            "type": "group",
+            "label": "Image",
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "text",
+                    "label": "Title",
+                    "description": "Title of image."
+                },
+                {
+                    "name": "image",
+                    "type": "image",
+                    "label": "Image_yeah",
+                    "description": "Image for the picture slider."
+                },
+                {
+                    "name": "header",
+                    "type": "text",
+                    "label": "Header",
+                    "description": "Header of image."
+                },
+                {
+                    "name": "text",
+                    "type": "text",
+                    "label": "Text",
+                    "description": "Text information about the image."
+                }
+            ]
+        }
+    }
+]

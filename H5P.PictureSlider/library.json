@@ -6,6 +6,9 @@
   "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.PictureSlider",
+  "preloadedDependencies": [
+    {"machineName": "carouFredSel-6.2.0", "majorVersion": 1, "minorVersion": 0}
+  ],
   "author": "griffen",
   "license": "cc-by-sa",
   "preloadedCss": [

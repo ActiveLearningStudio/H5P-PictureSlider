@@ -7,8 +7,7 @@
   "license": "cc-by-sa",
   "mainLibrary": "H5P.PictureSlider",
   "preloadedDependencies": [
-    {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0},
-    {"machineName": "carouFredSel-6.2.0", "majorVersion": 1, "minorVersion": 0}
+    {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0}
   ],
   "init": "H5P.PictureSlider",
   "embedTypes": ["div", "iframe"],
