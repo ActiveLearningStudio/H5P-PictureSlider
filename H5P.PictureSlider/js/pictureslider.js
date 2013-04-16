@@ -94,22 +94,40 @@ H5P.PictureSlider = function(params, contentId) {
             
             var as_infinite = slider_params.infinite;
             if(as_infinite == undefined) as_infinite = true;
+            
+            var as_responsive = slider_params.responsive;
+            if(as_responsive == undefined) as_responsive = false;
+            
+            var as_direction = slider_params.direction;
+            if(as_direction == undefined) as_direction = "left";
+            
+            var as_direction = slider_params.direction;
+            if(as_direction == undefined) as_direction = "left";
+            
+            var as_align = slider_params.align;
+            if(as_align == undefined) as_align = "center";
+            
+            var as_padding = slider_params.padding;
+            if(as_padding == undefined) as_padding = null;
+            
+            var as_synchronise = slider_params.synchronise;
+            if(as_synchronise == undefined) as_synchronise = null;
+            
+            var as_cookie = slider_params.cookie;
+            if(as_cookie == undefined) as_cookie = false;
                         
             $("#slidercontainer").carouFredSel({
                 circular: as_circular,
-                infinite: as_infinite
+                infinite: as_infinite,
+                responsive: as_responsive,
+                direction: as_direction,
+                align: as_align,
+                padding: as_padding,
+                synchronise: as_synchronise,
+                cookie: as_cookie
                 
                 /*                
                  items: slider_params[0].items,
-                 direction: slider_params[0].directions,
-                 
-                 width: slider_params[0].width,
-                 height: slider_params[0].height,
-                 responsive: slider_params[0].responsive,
-                 align: slider_params[0].align,
-                 padding: slider_params[0].padding,
-                 pagination: slider_params[0].pagination
-                 /*
                  auto: {
                  easing: slider_params[0].auto.easing,
                  duration: slider_params[0].duration,
