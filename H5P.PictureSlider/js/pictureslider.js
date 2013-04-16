@@ -101,9 +101,6 @@ H5P.PictureSlider = function(params, contentId) {
             var as_direction = slider_params.direction;
             if(as_direction == undefined) as_direction = "left";
             
-            var as_direction = slider_params.direction;
-            if(as_direction == undefined) as_direction = "left";
-            
             var as_align = slider_params.align;
             if(as_align == undefined) as_align = "center";
             
