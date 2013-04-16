@@ -1,6 +1,8 @@
 {
     "title": "Picture Slider",
     "SliderType": "html_carousel",
+    "width": "600",
+    "height": "400",
     "images": [
         {
         "title": "IMAGE TITLE 1",

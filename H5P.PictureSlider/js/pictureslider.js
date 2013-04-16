@@ -90,7 +90,7 @@ H5P.PictureSlider = function(params, contentId) {
             $slider.append($slidercontainer);
             for (var i = 0; i < slider_params.images.length; i++) {
                 //$slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image + '" width="' + slider_params.images[i].width + '"/><div><h4>' + slider_params.images[i].header + '</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
-                $slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.images[i].image.width + '"/><div><h4>header</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
+                $slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div><h4>header</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
             }
         } else if (slider_params.SliderType == "image_carousel") {
             var $slidercontainer = $('<div id="slidercontainer"></div>');

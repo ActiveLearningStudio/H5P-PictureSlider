@@ -12,6 +12,18 @@
         "description": "Type of slider (html_carousel)."
     },
     {
+        "name": "width",
+        "type": "text",
+        "label": "Width",
+        "description": "Width of slider (in pixels)."
+    },
+    {
+        "name": "height",
+        "type": "text",
+        "label": "Height",
+        "description": "Height of slider (in pixels)."
+    },
+    {
         "name": "images",
         "type": "list",
         "label": "Images",
