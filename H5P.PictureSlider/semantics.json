@@ -72,152 +72,161 @@
         "description": "Determines whether the carousel should start at its last viewed position."
     },
     {
-        "name": "auto",
+        "name": "autos",
         "type": "group",
         "label": "Bla bla",
         "Descrition": "Atuo",
-        "field": [
-            {
-                "name": "play",
-                "type": "text",
-                "label": "play (true)",
-                "description": "play"
-            },
-            {
-               "name": "timeoutDuration",
-                "type": "text",
-                "label": "timeoutDuration (true)",
-                "description": "timeoutDuration"     
-            },
-            {
-               "name": "delay",
-                "type": "text",
-                "label": "delay (true)",
-                "description": "delay"     
-            },
-            {
-               "name": "items",
-                "type": "text",
-                "label": "items",
-                "description": "items"     
-            },
-            {
-               "name": "fx",
-                "type": "text",
-                "label": "fx",
-                "description": "fx"     
-            },
-            {
-               "name": "easing",
-                "type": "text",
-                "label": "easing",
-                "description": "easing"     
-            },
-            {
-               "name": "duration",
-                "type": "text",
-                "label": "duration",
-                "description": "duration"     
-            },
-            {
-               "name": "pauseOnHover",
-                "type": "text",
-                "label": "pauseOnHover",
-                "description": "pauseOnHover"     
-            },
-            {
-               "name": "pauseOnEvent",
-                "type": "text",
-                "label": "pauseOnEvent",
-                "description": "pauseOnEvent"     
-            },
-            {
-               "name": "pauseOnResize",
-                "type": "text",
-                "label": "pauseOnResize",
-                "description": "pauseOnResize"     
-            },
-            {
-               "name": "queue",
-                "type": "text",
-                "label": "queue",
-                "description": "queue"     
-            },
-            {
-               "name": "event",
-                "type": "text",
-                "label": "event",
-                "description": "event"     
-            },
-            {
-                 "name": "progress",
-                "type": "group",
-                "label": "Bla bla",
-                "Descrition": "progress",
-                "field": [
-                    {
-                        "name": "bar",
-                        "type": "text",
-                        "label": "bar",
-                        "description": "bar"  
-                    },
-                    {
-                        "name": "updater",
-                        "type": "text",
-                        "label": "updater",
-                        "description": "updater"  
-                    },
-                    {
-                        "name": "interval",
-                        "type": "text",
-                        "label": "interval",
-                        "description": "interval"  
-                    }            
-                ]
-            },
-            {
-               "name": "conditions",
-                "type": "text",
-                "label": "conditions",
-                "description": "conditions"     
-            },
-            {
-               "name": "onBefore",
-                "type": "text",
-                "label": "onBefore",
-                "description": "onBefore"     
-            },
-            {
-               "name": "onAfter",
-                "type": "text",
-                "label": "onAfter",
-                "description": "onAfter"     
-            },
-            {
-               "name": "onEnd",
-                "type": "text",
-                "label": "onEnd",
-                "description": "onEnd"     
-            },
-            {
-               "name": "onTimeoutStart",
-                "type": "text",
-                "label": "onTimeoutStart",
-                "description": "onTimeoutStart"     
-            },
-            {
-               "name": "onTimeoutEnd",
-                "type": "text",
-                "label": "onTimeoutEnd",
-                "description": "onTimeoutEnd"     
-            },
-            {
-               "name": "onTimeoutPause",
-                "type": "text",
-                "label": "onTimeoutPause",
-                "description": "onTimeoutPause"     
-            }
-       ]
+        "field": {
+            "name": "auto",
+            "type": "group",
+            "label": "Auto",
+            "fields": [
+                {
+                    "name": "play",
+                    "type": "text",
+                    "label": "play (true)",
+                    "description": "play"
+                },
+                {
+                   "name": "timeoutDuration",
+                    "type": "text",
+                    "label": "timeoutDuration (true)",
+                    "description": "timeoutDuration"     
+                },
+                {
+                   "name": "delay",
+                    "type": "text",
+                    "label": "delay (true)",
+                    "description": "delay"     
+                },
+                {
+                   "name": "items",
+                    "type": "text",
+                    "label": "items",
+                    "description": "items"     
+                },
+                {
+                   "name": "fx",
+                    "type": "text",
+                    "label": "fx",
+                    "description": "fx"     
+                },
+                {
+                   "name": "easing",
+                    "type": "text",
+                    "label": "easing",
+                    "description": "easing"     
+                },
+                {
+                   "name": "duration",
+                    "type": "text",
+                    "label": "duration",
+                    "description": "duration"     
+                },
+                {
+                   "name": "pauseOnHover",
+                    "type": "text",
+                    "label": "pauseOnHover",
+                    "description": "pauseOnHover"     
+                },
+                {
+                   "name": "pauseOnEvent",
+                    "type": "text",
+                    "label": "pauseOnEvent",
+                    "description": "pauseOnEvent"     
+                },
+                {
+                   "name": "pauseOnResize",
+                    "type": "text",
+                    "label": "pauseOnResize",
+                    "description": "pauseOnResize"     
+                },
+                {
+                   "name": "queue",
+                    "type": "text",
+                    "label": "queue",
+                    "description": "queue"     
+                },
+                {
+                   "name": "event",
+                    "type": "text",
+                    "label": "event",
+                    "description": "event"     
+                },
+                {
+                    "name": "progresss",
+                    "type": "group",
+                    "label": "Bla bla",
+                    "field": {
+                        "name": "progress",
+                        "type": "group",
+                        "label": "Progress",
+                        "fields": [
+                            {
+                                "name": "bar",
+                                "type": "text",
+                                "label": "bar",
+                                "description": "bar"  
+                            },
+                            {
+                                "name": "updater",
+                                "type": "text",
+                                "label": "updater",
+                                "description": "updater"  
+                            },
+                            {
+                                "name": "interval",
+                                "type": "text",
+                                "label": "interval",
+                                "description": "interval"  
+                            }            
+                        ]
+                    }
+                },
+                {
+                   "name": "conditions",
+                    "type": "text",
+                    "label": "conditions",
+                    "description": "conditions"     
+                },
+                {
+                   "name": "onBefore",
+                    "type": "text",
+                    "label": "onBefore",
+                    "description": "onBefore"     
+                },
+                {
+                   "name": "onAfter",
+                    "type": "text",
+                    "label": "onAfter",
+                    "description": "onAfter"     
+                },
+                {
+                   "name": "onEnd",
+                    "type": "text",
+                    "label": "onEnd",
+                    "description": "onEnd"     
+                },
+                {
+                   "name": "onTimeoutStart",
+                    "type": "text",
+                    "label": "onTimeoutStart",
+                    "description": "onTimeoutStart"     
+                },
+                {
+                   "name": "onTimeoutEnd",
+                    "type": "text",
+                    "label": "onTimeoutEnd",
+                    "description": "onTimeoutEnd"     
+                },
+                {
+                   "name": "onTimeoutPause",
+                    "type": "text",
+                    "label": "onTimeoutPause",
+                    "description": "onTimeoutPause"     
+                }
+            ]
+        }
    },
    {
         "name": "images",
