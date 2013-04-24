@@ -67,19 +67,21 @@ H5P.PictureSlider = function(params, contentId) {
             var $slidercontainer = $('<div id="slidercontainer"></div>');
             $slider.append($slidercontainer);
             for (var i = 0; i < slider_params.images.length; i++) {
-                $slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div><h4>'+ slider_params.images[i].header +'</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
+                console.log("header: "+slider_params.images[i].header);
+                console.log("text: "+slider_params.images[i].text);
+                $slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image.path + '" alt="carousel '+i+'" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div><h4>'+ slider_params.images[i].header +'</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
             }
         } else if (slider_params.SliderType == "image_carousel") {
             var $slidercontainer = $('<div id="slidercontainer"></div>');
             $slider.append($slidercontainer);
             for (var i = 0; i < slider_params.images.length; i++) {
-                $slidercontainer.append($('<img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.images[i].image.width + '"/>'));
+                $slidercontainer.append($('<img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.width + '" height="' + slider_params.height + '"/>'));
             }
-        } else if (slider_params.SliderType == "-list_carousel") {
+        } else if (slider_params.SliderType == "list_carousel") {
             var $slidercontainer = $('<ul id="slidercontainer"></ul>');
             $slider.append($slidercontainer);
             for (var i = 0; i < slider_params.images.length; i++) {
-                $slidercontainer.append($('<li><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.images[i].image.width + '"/><div></li>'));
+                $slidercontainer.append($('<li><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div></li>'));
             }
         }
         $slidercontainer.append($('<div class="clearfix"></div>'));
@@ -88,6 +90,7 @@ H5P.PictureSlider = function(params, contentId) {
         $(".picture-slider", dom).append($slider);
 
 
+//        $(window).ready(function() {
         $(function() {
             var as_circular = slider_params.circular;
             if(as_circular == undefined) as_circular = true; 
@@ -112,7 +115,16 @@ H5P.PictureSlider = function(params, contentId) {
             
             var as_cookie = slider_params.cookie;
             if(as_cookie == undefined) as_cookie = false;
-                        
+           
+            var as_items = slider_params.items;
+            if(as_items == undefined) as_items = 1;
+
+            var as_auto = slider_params.auto;
+            if(as_auto == undefined) as_auto = true;
+            
+            var as_scroll = slider_params.scroll;
+            if(as_scroll == undefined) as_scroll = 1;
+            
             $("#slidercontainer").carouFredSel({
                 circular: as_circular,
                 infinite: as_infinite,
@@ -121,21 +133,19 @@ H5P.PictureSlider = function(params, contentId) {
                 align: as_align,
                 padding: as_padding,
                 synchronise: as_synchronise,
-                cookie: as_cookie
-                
-                /*                
-                 items: slider_params[0].items,
-                 auto: {
-                 easing: slider_params[0].auto.easing,
-                 duration: slider_params[0].duration,
-                 timeoutDuration: slider_params[0].timeoutDuration,
-                 pauseOnHover: slider_params[0].pauseOnHover
-                 }
-                 }).find(".slide").hover(
-                 //     function() { $(this).find("div").slideDown(); },
-                 //   function() { $(this).find("div").slideUp();	}
-                 */
-            });
+                cookie: as_cookie,
+                items: as_items,
+                scroll: as_scroll
+//                auto : {
+//        	        easing      : "elastic",
+//        	        duration    : 1000,
+//        	        timeoutDuration: 2000,
+//        	        pauseOnHover: true
+//        	    }
+        	}).find(".slide").hover(
+        	    function() { $(this).find("div").slideDown(); },
+        	    function() { $(this).find("div").slideUp(); }
+        	);
         });
 
         //TODO: add actions

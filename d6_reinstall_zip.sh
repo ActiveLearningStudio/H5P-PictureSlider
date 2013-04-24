@@ -1,12 +1,4 @@
-echo "##################"
-echo "# Delete old H5P #"
-echo "##################"
-rm picture_slider.h5p
-zip -r picture_slider.h5p *
-echo "################################"
-echo "# New Picture Slider is ready! #"
-echo "################################"
-echo "################################"
+sudo sh create_zip.sh 
 echo ""
 echo "################################"
 echo "# Delete temp files from H5P   #"
