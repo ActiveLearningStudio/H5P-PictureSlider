@@ -3,82 +3,34 @@
         "name": "title",
         "type": "text",
         "label": "Picture Slider",
-        "description": "Picture Slider title"
+        "description": "Set title for Picture Slider"
     },
     {
         "name": "SliderType",
         "type": "text",
         "label": "Type of slider",
-        "description": "Type of slider (html_carousel)."
+        "description": "Type of slider (html_carousel, image_carousel, list_carousel)."
     },
     {
         "name": "width",
-        "type": "text",
+        "type": "number",
         "label": "Width",
         "description": "The width of the slider. ADD MORE WIDTH INFORMATION HERE"
     },
     {
         "name": "height",
-        "type": "text",
+        "type": "number",
         "label": "Height",
         "description": "Height of slider. ADD MORE HEIGHT INFORMATION HERE"
     },
     {
-        "name": "circular",
-        "type": "text",
-        "label": "Circular (true/false)",
-        "description": "Determines whether the slider should be circular"
-    },
-    {
-        "name": "infinite",
-        "type": "text",
-        "label": "Infinite (true/false)",
-        "description": "Determines whether the slider should be infinite. Note: It is possible to create a non-circular, infinite slider, but it is not possible to create a circular, non-infinite slider. (true or false)"
-    },
-    {
-        "name": "responsive",
-        "type": "text",
-        "label": "Responsive (true/false)",
-        "description": "Determines whether the slider should be responsive. If true, the items will be resized to fill the carousel."
-    },
-    {
-        "name": "direction",
-        "type": "text",
-        "label": "Direction (right/left/up/down)",
-        "description": "The direction to scroll the carousel, determines whether the carousel scrolls horizontal or vertical and -when the carousel scrolls automatically- in what direction."
-    },
-    {
-        "name": "align",
-        "type": "text",
-        "label": "Align (center/left/right/false)",
-        "description": "Whether and how to align the items inside a fixed width/height."
-    },
-    {
-        "name": "padding",
-        "type": "text",
-        "label": "Padding (top/right/bottom/left) ADD MORE INFO",
-        "description": "Padding around the slider"
-    },
-    {
-        "name": "synchronise",
-        "type": "text",
-        "label": "Synchronise ADD MORE INFO",
-        "description": "Selector for the slider to synchronise."
-    },
-    {
-        "name": "cookie",
-        "type": "text",
-        "label": "Cookie ADD MORE INFO",
-        "description": "Determines whether the carousel should start at its last viewed position."
-    },    
-   {
         "name": "images",
         "type": "list",
         "label": "Images",
         "entity": "image",
         "description": "List of images in the picture slider.",
         "min": 1,
-        "max": 9,
+        "max": 50,
         "field": {
             "name": "image",
             "type": "group",
@@ -93,11 +45,11 @@
                 {
                     "name": "image",
                     "type": "image",
-                    "label": "Image_yeah",
+                    "label": "Image",
                     "description": "Image for the picture slider."
                 },
                 {
-                    "name": "header",
+                    "name": "image_header",
                     "type": "text",
                     "label": "Header",
                     "description": "Header of image."
@@ -110,5 +62,60 @@
                 }
             ]
         }
+    },
+    {
+        "name": "settings",
+        "type": "group",
+        "label": "Advanced Settings",
+        "fields": [
+            {
+                "name": "circular",
+                "type": "boolean",
+                "label": "Circular",
+                "description": "Determines whether the slider should be circular"
+            },
+            {
+                "name": "infinite",
+                "type": "boolean",
+                "label": "Infinite",
+                "description": "Determines whether the slider should be infinite. Note: It is possible to create a non-circular, infinite slider, but it is not possible to create a circular, non-infinite slider. (true or false)"
+            },
+            {
+                "name": "responsive",
+                "type": "boolean",
+                "label": "Responsive",
+                "description": "Determines whether the slider should be responsive. If true, the items will be resized to fill the carousel."
+            },
+            {
+                "name": "direction",
+                "type": "text",
+                "label": "Direction (right/left/up/down)",
+                "description": "The direction to scroll the carousel, determines whether the carousel scrolls horizontal or vertical and -when the carousel scrolls automatically- in what direction."
+            },
+            {
+                "name": "align",
+                "type": "text",
+                "label": "Align (center/left/right/false)",
+                "description": "Whether and how to align the items inside a fixed width/height."
+            },
+            {
+                "name": "padding",
+                "type": "text",
+                "label": "Padding (top/right/bottom/left) ADD MORE INFO",
+                "description": "Padding around the slider"
+            },
+            {
+                "name": "synchronise",
+                "type": "text",
+                "label": "Synchronise ADD MORE INFO",
+                "description": "Selector for the slider to synchronise."
+            },
+            {
+                "name": "cookie",
+                "type": "text",
+                "label": "Cookie ADD MORE INFO",
+                "description": "Determines whether the carousel should start at its last viewed position."
+            }
+        ]
     }
 ]

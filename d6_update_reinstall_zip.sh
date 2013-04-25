@@ -21,4 +21,4 @@ sudo drush -y pm-enable h5peditor
 #drush en h5p h5peditor
 #sudo drush dre h5peditor h5p
 #sudo drush cc all
-cd ~/dev/picture_slider/ 
+cd ~/dev/picture_slider/

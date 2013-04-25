@@ -67,8 +67,6 @@ H5P.PictureSlider = function(params, contentId) {
             var $slidercontainer = $('<div id="slidercontainer"></div>');
             $slider.append($slidercontainer);
             for (var i = 0; i < slider_params.images.length; i++) {
-                console.log("header: "+slider_params.images[i].header);
-                console.log("text: "+slider_params.images[i].text);
                 $slidercontainer.append($('<div class="slide"><img src="' + cp + slider_params.images[i].image.path + '" alt="carousel '+i+'" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div><h4>'+ slider_params.images[i].header +'</h4><p>' + slider_params.images[i].text + '</p></div></div>'));
             }
         } else if (slider_params.SliderType == "image_carousel") {
@@ -84,14 +82,14 @@ H5P.PictureSlider = function(params, contentId) {
                 $slidercontainer.append($('<li><img src="' + cp + slider_params.images[i].image.path + '" width="' + slider_params.width + '" height="' + slider_params.height + '"/><div></li>'));
             }
         }
-        $slidercontainer.append($('<div class="clearfix"></div>'));
+        $slider.append($('<div class="clearfix"></div>'));
 
         // Insert DOM in Picture Slider
         $(".picture-slider", dom).append($slider);
 
 
-//        $(window).ready(function() {
         $(function() {
+//            console.log("test.. "+slider_params.settings.circular);
             var as_circular = slider_params.circular;
             if(as_circular == undefined) as_circular = true; 
             

@@ -5,34 +5,64 @@
     "height": "400",
     "images": [
         {
-        "title": "IMAGE TITLE 1",
+        "title": "fog",
         "image": {
-            "path": "image/1.jpg",
+            "path": "image/1.JPG",
             "width": 600,
             "height": 600
          },
-        "header:": "Image header 1..",
-        "text": "Image text 1.."        
+        "header": "Fog",
+        "text": "The fog is low"        
         },
         {
-        "title": "IMAGE TITLE 2",
+        "title": "sea",
         "image": {
-            "path": "image/2.jpg",
+            "path": "image/2.JPG",
             "width": 600,
             "height": 600
          },
-        "header:": "Image header 2..",
-        "text": "Image text 2.."        
+        "header": "Sea",
+        "text": "Nice on the lake"        
         },
         {
-        "title": "IMAGE TITLE 3",
+        "title": "duck",
         "image": {
-            "path": "image/3.jpg",
+            "path": "image/3.JPG",
             "width": 600,
             "height": 600
           },
-        "header:": "Image header 3..",
-        "text": "Image text 3.."        
+        "header": "Duck",
+        "text": "A nice duck"        
+        },
+        {
+        "title": "oldboats",
+        "image": {
+            "path": "image/4.JPG",
+            "width": 600,
+            "height": 600
+          },
+        "header": "Old boats",
+        "text": "Some old boats"        
+        },
+        {
+        "title": "racer",
+        "image": {
+            "path": "image/5.JPG",
+            "width": 600,
+            "height": 600
+          },
+        "header": "Steering toboggan",
+        "text": "Nicely parked"        
+        },
+        {
+        "title": "vessel",
+        "image": {
+            "path": "image/6.JPG",
+            "width": 600,
+            "height": 600
+          },
+        "header": "Fishing vessel",
+        "text": "Fishing vessel heading forwards shore"        
         }
     ]
 }
