@@ -1,8 +1,8 @@
 {
   "title": "Picture Slider",
-  "contentType": "test",
-  "utilization": "Picture slider for H5P",
-  "language": "nb",
+  "contentType": "Slider of Images",
+  "utilization": "Picture Slider for H5P",
+  "language": "en",
   "author": "griffen",
   "license": "cc-by-sa",
   "mainLibrary": "H5P.PictureSlider",

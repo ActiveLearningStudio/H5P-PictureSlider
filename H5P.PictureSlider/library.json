@@ -1,6 +1,6 @@
 {
-  "title": "Picture slider!",
-  "description": "Simple picture slider H5P",
+  "title": "Picture slider",
+  "description": "Simple Picture Slider - H5P",
   "majorVersion": 1,
   "minorVersion": 0,
   "patchVersion": 0,
@@ -10,7 +10,7 @@
     {"machineName": "carouFredSel-6.2.0", "majorVersion": 1, "minorVersion": 0}
   ],
   "author": "griffen",
-  "license": "cc-by-sa",
+  "license": "MIT",
   "preloadedCss": [
     {"path": "css/pictureslider.css"}
   ],

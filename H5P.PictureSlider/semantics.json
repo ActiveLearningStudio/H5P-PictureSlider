@@ -3,32 +3,26 @@
         "name": "title",
         "type": "text",
         "label": "Picture Slider",
-        "description": "Set title for Picture Slider"
-    },
-    {
-        "name": "SliderType",
-        "type": "text",
-        "label": "Type of slider",
-        "description": "Type of slider (html_carousel, image_carousel, list_carousel)."
+        "description": "Title for Picture Slider"
     },
     {
         "name": "width",
         "type": "number",
         "label": "Width",
-        "description": "The width of the slider. ADD MORE WIDTH INFORMATION HERE"
+        "description": "Width of the Picture Slider in pixels."
     },
     {
         "name": "height",
         "type": "number",
         "label": "Height",
-        "description": "Height of slider. ADD MORE HEIGHT INFORMATION HERE"
+        "description": "Height of Picture Slider in pixels."
     },
     {
         "name": "images",
         "type": "list",
         "label": "Images",
         "entity": "image",
-        "description": "List of images in the picture slider.",
+        "description": "List of Images in the Picture Slider.",
         "min": 1,
         "max": 50,
         "field": {
@@ -40,25 +34,25 @@
                     "name": "title",
                     "type": "text",
                     "label": "Title",
-                    "description": "Title of image."
+                    "description": "Title of Image."
                 },
                 {
                     "name": "image",
                     "type": "image",
                     "label": "Image",
-                    "description": "Image for the picture slider."
+                    "description": "Image for Picture Slider."
                 },
                 {
-                    "name": "image_header",
+                    "name": "header",
                     "type": "text",
                     "label": "Header",
-                    "description": "Header of image."
+                    "description": "Header of Image."
                 },
                 {
                     "name": "text",
                     "type": "text",
                     "label": "Text",
-                    "description": "Text information about the image."
+                    "description": "Text information about the Image."
                 }
             ]
         }
@@ -81,40 +75,10 @@
                 "description": "Determines whether the slider should be infinite. Note: It is possible to create a non-circular, infinite slider, but it is not possible to create a circular, non-infinite slider. (true or false)"
             },
             {
-                "name": "responsive",
-                "type": "boolean",
-                "label": "Responsive",
-                "description": "Determines whether the slider should be responsive. If true, the items will be resized to fill the carousel."
-            },
-            {
                 "name": "direction",
                 "type": "text",
                 "label": "Direction (right/left/up/down)",
                 "description": "The direction to scroll the carousel, determines whether the carousel scrolls horizontal or vertical and -when the carousel scrolls automatically- in what direction."
-            },
-            {
-                "name": "align",
-                "type": "text",
-                "label": "Align (center/left/right/false)",
-                "description": "Whether and how to align the items inside a fixed width/height."
-            },
-            {
-                "name": "padding",
-                "type": "text",
-                "label": "Padding (top/right/bottom/left) ADD MORE INFO",
-                "description": "Padding around the slider"
-            },
-            {
-                "name": "synchronise",
-                "type": "text",
-                "label": "Synchronise ADD MORE INFO",
-                "description": "Selector for the slider to synchronise."
-            },
-            {
-                "name": "cookie",
-                "type": "text",
-                "label": "Cookie ADD MORE INFO",
-                "description": "Determines whether the carousel should start at its last viewed position."
             }
         ]
     }
