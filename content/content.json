@@ -1,18 +1,30 @@
 {
     "title": "Picture Slider",
-    "width": "600",
+    "width": "900",
     "height": "400",
     "settings": {
             "circular": "true",
-            "direction": "up"
+            "direction": "up",
+            "pagination": "true",
+            "scroll": {
+                "fx": "crossfade",
+                "items": "1",
+                "duration": 3000
+            },
+            "auto": {
+                "play": true,
+                "items": "1",
+                "duration": 1000,
+                "pauseOnHover": true
+            }
     },
     "images": [
         {
         "title": "fog",
         "image": {
             "path": "image/1.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height":400
          },
         "header": "Fog",
         "text": "The fog is low"        
@@ -21,8 +33,8 @@
         "title": "sea",
         "image": {
             "path": "image/2.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height": 400
          },
         "header": "Sea",
         "text": "Nice on the lake"        
@@ -31,8 +43,8 @@
         "title": "duck",
         "image": {
             "path": "image/3.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height": 400
           },
         "header": "Duck",
         "text": "A nice duck"        
@@ -41,8 +53,8 @@
         "title": "oldboats",
         "image": {
             "path": "image/4.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height": 400
           },
         "header": "Old boats",
         "text": "Some old boats"        
@@ -51,8 +63,8 @@
         "title": "racer",
         "image": {
             "path": "image/5.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height": 400
           },
         "header": "Steering toboggan",
         "text": "Nicely parked"        
@@ -61,8 +73,8 @@
         "title": "vessel",
         "image": {
             "path": "image/6.JPG",
-            "width": 600,
-            "height": 600
+            "width": 900,
+            "height": 400
           },
         "header": "Fishing vessel",
         "text": "Fishing vessel heading forwards shore"        
