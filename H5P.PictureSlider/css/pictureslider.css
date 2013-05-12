@@ -14,64 +14,86 @@
     CarouFredSel
 */
 .html_carousel {
-	padding: 15px 0 15px 40px;
+    padding: 15px 0 15px 40px;
 }
 .html_carousel div.slide {
-	position: relative;
+    position: relative;
 }
 .html_carousel div.slide div {
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 100%;
-	display: none;
-	position: absolute;
-	bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    display: none;
+    position: absolute;
+    bottom: 0;
 }
 .html_carousel div.slide h4 {
-	font-size: 35px;
-	padding: 30px 0 0 100px;
+    font-size: 35px;
+    padding: 30px 0 0 100px;
 }
 .html_carousel div.slide p {
-	font-size: 16px;
-	padding: 0 0 30px 100px;
+    font-size: 16px;
+    padding: 0 0 30px 100px;
 }
 .html_carousel div.slide h4, .html_carousel div.slide p {
-	color: white;
-	margin: 0;
+    color: white;
+    margin: 0;
 }
 .image_carousel {
-	padding: 15px 0 15px 40px;
+    padding: 15px 0 15px 40px;
 }
 .image_carousel img {
-	border: 1px solid #ccc;
-	background-color: white;
-	padding: 9px;
-	margin: 7px;
-	display: block;
-	float: left;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 9px;
+    margin: 7px;
+    display: block;
+    float: left;
 }
 .list_carousel {
-	padding: 15px 0 15px 40px;
+    padding: 15px 0 15px 40px;
 }
 .list_carousel ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
 }
 .list_carousel li {
-	font-size: 30px;
-	color: #666;
-	text-align: center;
-	background-color: #f0f0f0;
-	border: 5px solid #ccc;
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	margin: 6px;
-	display: block;
-	float: left;
+    font-size: 30px;
+    color: #666;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 5px solid #ccc;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 6px;
+    display: block;
+    float: left;
 }
 .clearfix {
-	float: none;
-	clear: both;
+    float: none;
+    clear: both;
 }
+#pager {
+    text-align: center;
+    padding-top: 10px;
+}
+#pager a {
+    background: #ccc;
+    display: inline-block;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+}
+#pager a.selected {
+    background: #999;
+}
+#pager a:hover {
+    background: #666;
+}
+#pager a span {
+    display: none;
+} 
+
