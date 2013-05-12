@@ -2,6 +2,8 @@ TODO:
 
 General:
 - Remove lib that is not in use
+- Smaller PS size
+- PS size is to wide 
 
 
 S3Slider:
@@ -9,5 +11,12 @@ S3Slider:
 - Set author
 - Comment
 - Use other pictures than related to me personally
+
+Semantic:
+Init:
+- Auto
+-
+
+
 
 - 
