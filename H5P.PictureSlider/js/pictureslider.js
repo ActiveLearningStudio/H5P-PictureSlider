@@ -69,7 +69,7 @@ H5P.PictureSlider = function(params, contentId) {
             "SliderType": "html_carousel",
             "image": "",
             "action": "",
-            "width": "900",
+            "width": "600",
             "height": "400",
             "settings": {
                 "infinite": true,

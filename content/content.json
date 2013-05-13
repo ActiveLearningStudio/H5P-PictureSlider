@@ -1,6 +1,6 @@
 {
     "title": "Picture Slider",
-    "width": "900",
+    "width": "600",
     "height": "400",
     "settings": {
             "circular": "true",
@@ -23,7 +23,7 @@
         "title": "fog",
         "image": {
             "path": "image/1.JPG",
-            "width": 900,
+            "width": 600,
             "height":400
          },
         "header": "Fog",
@@ -33,7 +33,7 @@
         "title": "sea",
         "image": {
             "path": "image/2.JPG",
-            "width": 900,
+            "width": 600,
             "height": 400
          },
         "header": "Sea",
@@ -43,7 +43,7 @@
         "title": "duck",
         "image": {
             "path": "image/3.JPG",
-            "width": 900,
+            "width": 600,
             "height": 400
           },
         "header": "Duck",
@@ -53,7 +53,7 @@
         "title": "oldboats",
         "image": {
             "path": "image/4.JPG",
-            "width": 900,
+            "width": 600,
             "height": 400
           },
         "header": "Old boats",
@@ -63,7 +63,7 @@
         "title": "racer",
         "image": {
             "path": "image/5.JPG",
-            "width": 900,
+            "width": 600,
             "height": 400
           },
         "header": "Steering toboggan",
@@ -73,7 +73,7 @@
         "title": "vessel",
         "image": {
             "path": "image/6.JPG",
-            "width": 900,
+            "width": 600,
             "height": 400
           },
         "header": "Fishing vessel",
