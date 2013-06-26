@@ -1,16 +1,14 @@
 {
   "title": "Picture Slider",
   "contentType": "Slider of Images",
-  "utilization": "Picture Slider for H5P",
+  "utilization": "Picture Slider",
   "language": "en",
   "author": "griffen",
-  "license": "cc-by-sa",
+  "license": "MIT",
   "mainLibrary": "H5P.PictureSlider",
   "preloadedDependencies": [
     {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0}
   ],
   "init": "H5P.PictureSlider",
-  "embedTypes": ["div", "iframe"],
-  "w": 635,
-  "h": 500
+  "embedTypes": ["div"]
 }

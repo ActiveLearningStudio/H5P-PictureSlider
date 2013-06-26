@@ -11,7 +11,6 @@
  */
 
 /*
- * 
  * Init a H5P object
  */
 var H5P = H5P || {};
@@ -26,6 +25,7 @@ var H5P = H5P || {};
  *  The Picture Slider Object
  */
 H5P.PictureSlider = function(params, contentId) {
+    var that = this;
     if (!(this instanceof H5P.PictureSlider))
         return H5P.PictureSlider(params, contentId);
 
@@ -34,7 +34,42 @@ H5P.PictureSlider = function(params, contentId) {
     
     // Making a shorcut path to the content
     var cp = H5P.getContentPath(contentId);
-
+    
+    //Setting default values
+    var defaults = {
+        "title": "Picture Slider",
+        "SliderType": "html_carousel",
+        "image": "",
+        "action": "",
+        "width": "600",
+        "height": "400",
+        "settings": {
+            "infinite": true,
+            "responsive": false,
+            "circular": "true",
+            "direction": "up",
+            "align": "center",
+            "padding": null,
+            "synchronise": null,
+            "cookie": false,
+            "items": 1,
+            "pagination": "true",
+            "scroll": {
+                "fx": "crossfade",
+                "items": "1",
+                "duration": 3000
+            },
+            "auto": {
+                "play": true,
+                "items": "1",
+                "duration": 1000,
+                "pauseOnHover": true
+            }
+        },
+    };
+    
+    var params = $.extend({}, defaults, params);
+            
     var $myDom;
 
     /**
@@ -44,61 +79,15 @@ H5P.PictureSlider = function(params, contentId) {
      *  Where the H5P html should be placed
      */
     this.attach = function(target) {
+        var that = this;
+        
         // Make sure we have a jquery object
-        var $target = typeof target === 'string' ? $('#' + target) : target;
+        $myDom = typeof target === 'string' ? $('#' + target) : target;
 
-        // Render own DOM into target.
-        $myDom = $target;
         $myDom.html('<div class="picture-slider"></div>');
-        $('.picture-slider', $myDom).css({
-            width: params.width,
-            height: params.height
-        });
 
        //Adding the Picture Slider
-        var slide = new MakeSlider($myDom, params);
-
-        return this;
-    };
-
-    // An internal Object only available to Picture Slider
-    function MakeSlider(dom, slider_params) {
-        //Setting default values
-        var defaults = {
-            "title": "Picture Slider",
-            "SliderType": "html_carousel",
-            "image": "",
-            "action": "",
-            "width": "600",
-            "height": "400",
-            "settings": {
-                "infinite": true,
-                "responsive": false,
-                "circular": "true",
-                "direction": "up",
-                "align": "center",
-                "padding": null,
-                "synchronise": null,
-                "cookie": false,
-                "items": 1,
-                "pagination": "true",
-                "scroll": {
-                    "fx": "crossfade",
-                    "items": "1",
-                    "duration": 3000
-                },
-                "auto": {
-                    "play": true,
-                    "items": "1",
-                    "duration": 1000,
-                    "pauseOnHover": true
-                }
-            },
-        };
-
-        var params = $.extend({}, defaults, slider_params);
-
-        // Render Picture Slider DOM elements
+       // Render Picture Slider DOM elements
         var $slider = $('<div class="' + params.SliderType + '"></div>');
         
         //Setting image with and height
@@ -139,8 +128,10 @@ H5P.PictureSlider = function(params, contentId) {
         }
 
         // Insert DOM in Picture Slider
-        $(".picture-slider", dom).append($slider);
+        //$(".picture-slider", dom).append($slider);
 
+        $myDom.append($slider);
+        
         //Setting Picture Slider properties
         $(function() {
             $("#slidercontainer").carouFredSel({
@@ -173,7 +164,9 @@ H5P.PictureSlider = function(params, contentId) {
         	    function() { $(this).find("div").slideUp(); }
         	);                
         });
-    }
+
+        return this;
+    };
 
 
 };

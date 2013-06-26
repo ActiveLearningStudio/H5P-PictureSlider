@@ -15,6 +15,7 @@
 */
 .html_carousel {
     padding: 0px 0px 0px 0px;
+    display: inline-block;
 }
 .html_carousel div.slide {
     position: absolute;
@@ -81,7 +82,7 @@
 }
 #pager {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 10px;    
 }
 #pager a {
     background: #ccc;
