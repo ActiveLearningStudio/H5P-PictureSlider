@@ -4,7 +4,7 @@
  *	griffwith.com/drupal
  *
  *	Copyright (c) 2013 griffen
- *	www.griffwith.com
+ *	griffwith.com
  *
  *	Licensed under MIT licenses.
  *	http://en.wikipedia.org/wiki/MIT_License
@@ -68,6 +68,7 @@ H5P.PictureSlider = function(params, contentId) {
         },
     };
     
+    // setting all the paramters into one variable
     var params = $.extend({}, defaults, params);
             
     var $myDom;
@@ -93,7 +94,8 @@ H5P.PictureSlider = function(params, contentId) {
         //Setting image with and height
         var as_imagewidth = params.width; 
         var as_imageheight = params.height-35;
-                
+        
+        // creating fom dom for a html_carousel
         if (params.SliderType === "html_carousel") {
             var $slidercontainer = $('<div id="slidercontainer"></div>');
             $slider.append($slidercontainer);
@@ -108,13 +110,19 @@ H5P.PictureSlider = function(params, contentId) {
                     $slidercontainer.append($('<div class="slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel '+i+'" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div class="imageinfo"><h4>'+ params.images[i].header +'</h4><p>' + params.images[i].text + '</p></div></div>'));
                 }
             }
-        } else if (params.SliderType === "image_carousel") {
+        } 
+        // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
+        // creating fom dom for a image_carousel
+        else if (params.SliderType === "image_carousel") {
             var $slidercontainer = $('<div id="slidercontainer"></div>');
             $slider.append($slidercontainer);
             for (var i = 0; i < params.images.length; i++) {
                 $slidercontainer.append($('<img src="' + cp + params.images[i].image.path + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/>'));
             }
-        } else if (params.SliderType === "list_carousel") {
+        }
+        // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
+        // creating fom dom for a list_carousel
+        else if (params.SliderType === "list_carousel") {
             var $slidercontainer = $('<ul id="slidercontainer"></ul>');
             $slider.append($slidercontainer);
             for (var i = 0; i < params.images.length; i++) {
@@ -123,12 +131,11 @@ H5P.PictureSlider = function(params, contentId) {
         }
         $slider.append($('<div class="clearfix"></div>'));
 
+        // check if pagination is set
         if(params.settings.pagination){
+            //creating paginationbar
             $slider.append($('<div id="pager"></div>'));
         }
-
-        // Insert DOM in Picture Slider
-        //$(".picture-slider", dom).append($slider);
 
         $myDom.append($slider);
         
