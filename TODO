@@ -1,22 +1,5 @@
 TODO:
-
-General:
-- Remove lib that is not in use
-- Smaller PS size
-- PS size is to wide 
-
-
-S3Slider:
-- Set license (is set for now: cc-by-nc-sa)
-- Set author
-- Comment
-- Use other pictures than related to me personally
-
-Semantic:
-Init:
-- Auto
--
+- add H5P to css variables
 
 
 
-- 

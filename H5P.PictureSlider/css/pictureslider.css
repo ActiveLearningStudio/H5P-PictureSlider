@@ -6,47 +6,47 @@
         Purpose of the stylesheet follows.
 */
 
-.picture-slider {
+.h5p-picture-slider {
     color: #000066;
 }
 
 /*
     CarouFredSel
 */
-.html_carousel {
+.h5p-html_carousel {
     padding: 0px 0px 0px 0px;
     display: inline-block;
 }
-.html_carousel div.slide {
+.h5p-html_carousel div.h5p-slide {
     position: absolute;
 }
-.html_carousel div.slide div {
+.h5p-html_carousel div.h5p-slide div {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     display: none;
     position: absolute;
     bottom: 0;
 }
-.html_carousel div.slide div {
+.h5p-html_carousel div.h5p-slide div {
     position: absolute;
     bottom: 4px;
 }
-.html_carousel div.slide h4 {
+.h5p-html_carousel div.h5p-slide h4 {
     font-size: 35px;
     padding: 10px 0 0 100px;
 }
-.html_carousel div.slide p {
+.h5p-html_carousel div.h5p-slide p {
     font-size: 16px;
     padding: 10px 0 30px 100px;
 }
-.html_carousel div.slide h4, .html_carousel div.slide p {
+.h5p-html_carousel div.h5p-slide h4, .h5p-html_carousel div.h5p-slide p {
     color: white;
     margin: 0;
 }
-.image_carousel {
+.h5p-image_carousel {
     padding: 15px 0 15px 40px;
 }
-.image_carousel img {
+.h5p-image_carousel img {
     border: 1px solid #ccc;
     background-color: white;
     padding: 9px;
@@ -54,16 +54,16 @@
     display: block;
     float: left;
 }
-.list_carousel {
+.h5p-list_carousel {
     padding: 15px 0 15px 40px;
 }
-.list_carousel ul {
+.h5p-list_carousel ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: block;
 }
-.list_carousel li {
+.h5p-list_carousel li {
     font-size: 30px;
     color: #666;
     text-align: center;
@@ -76,15 +76,15 @@
     display: block;
     float: left;
 }
-.clearfix {
+.h5p-clearfix {
     float: none;
     clear: both;
 }
-#pager {
+#h5p-pager {
     text-align: center;
     padding-top: 10px;    
 }
-#pager a {
+#h5p-pager a {
     background: #ccc;
     display: inline-block;
     border-radius: 5px;
@@ -92,13 +92,13 @@
     height: 10px;
     margin: 0 2px;
 }
-#pager a.selected {
+#h5p-pager a.selected {
     background: #999;
 }
-#pager a:hover {
+#h5p-pager a:hover {
     background: #666;
 }
-#pager a span {
+#h5p-pager a span {
     display: none;
 } 
 
