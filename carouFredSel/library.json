@@ -3,12 +3,12 @@
   "contentType": "library",
   "majorVersion": 6,
   "minorVersion": 2,
-  "patchVersion": 0,
+  "patchVersion": 1,
   "runnable": 0,
   "machineName": "carouFredSel",
   "author": "Carou Fred Sel",
   "license": "MIT",
   "preloadedJs": [
-    {"path": "js/jquery_carouFredSel-6.2.0.js"}
+    {"path": "jquery.carouFredSel-6.2.1.js"}
   ]
 }
