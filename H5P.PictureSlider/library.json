@@ -7,7 +7,7 @@
   "runnable": 1,
   "machineName": "H5P.PictureSlider",
   "preloadedDependencies": [
-    {"machineName": "carouFredSel-6.2.0", "majorVersion": 1, "minorVersion": 0}
+    {"machineName": "carouFredSel", "majorVersion": 6, "minorVersion": 2}
   ],
   "author": "griffen",
   "license": "MIT",

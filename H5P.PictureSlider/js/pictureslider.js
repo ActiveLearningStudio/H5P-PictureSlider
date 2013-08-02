@@ -14,7 +14,6 @@
  * Init a H5P object
  */
 var H5P = H5P || {};
-
 /**
  * 
  * @param object params
@@ -25,159 +24,147 @@ var H5P = H5P || {};
  *  The Picture Slider Object
  */
 H5P.PictureSlider = function(params, contentId) {
+  var that = this;
+  if (!(this instanceof H5P.PictureSlider))
+    return H5P.PictureSlider(params, contentId);
+  // Get the newest jquery from H5P
+  var $ = H5P.jQuery;
+  // Making a shorcut path to the content
+  var cp = H5P.getContentPath(contentId);
+  //Setting default values
+  var defaults = {
+    "SliderType": "html_carousel",
+    "image": "",
+    "action": "",
+    "width": "600",
+    "height": "400",
+    "items": "variable",
+    "settings": {
+      "infinite": true,
+      "responsive": false,
+      "circular": true,
+      "direction": "up",
+      "align": "center",
+      "padding": null,
+      "synchronise": null,
+      "cookie": false,
+      "items": 1,
+      "pagination": false,
+      "scroll": {
+        "fx": "crossfade",
+        "items": "1",
+        "duration": 3000
+      },
+      "auto": {
+        "play": true,
+        "items": "1",
+        "duration": 1000,
+        "pauseOnHover": true
+      }
+    },
+  };
+  // setting all the paramters into one variable
+  var params = $.extend({}, defaults, params);
+  var $myDom;
+  /**
+   * Attach the Picture Slider html to a given target
+   * 
+   * @param {string|jquery} target
+   *  Where the H5P html should be placed
+   */
+  this.attach = function(target) {
     var that = this;
-    if (!(this instanceof H5P.PictureSlider))
-        return H5P.PictureSlider(params, contentId);
+    // Make sure we have a jquery object
+    $myDom = typeof target === 'string' ? $('#' + target) : target;
+    // $myDom.html('<div class="h5p-picture-slider"></div>');
 
-    // Get the newest jquery from H5P
-    var $ = H5P.jQuery;
+    //Adding the Picture Slider
+    // Render Picture Slider DOM elements
+    var $slider = $('<div class="h5p-ps-' + params.SliderType + '"></div>');
+    //Setting image with and height
+    var asImageWidth = params.width;
+    var asImageHeight = params.height - 35;
+    // creating fom dom for a html_carousel
+    if (params.SliderType === "html_carousel") {
+      var $slidercontainer = $('<div id="h5p-ps-slidercontainer"></div>');
+      $slider.append($slidercontainer);
+      for (var i = 0; i < params.images.length; i++) {
+        if ((!params.images[i].header) && (!params.images[i].text)) {
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div></div></div>'));
+        } else if ((!params.images[i].header) && (params.images[i].text)) {
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4"></h4><p class="h5p-ps-p">' + params.images[i].text + '</p></div></div>'));
+        } else if ((params.images[i].header) && (!params.images[i].text)) {
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4">' + params.images[i].header + '</h4><p class="h5p-ps-p"></p></div></div>'));
+        } else {
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4">' + params.images[i].header + '</h4><p class="h5p-ps-p">' + params.images[i].text + '</p></div></div>'));
+        }
+      }
+    }
+// TODO: NOT IMPLEMENTED IN H5P EDITOR YET
+// creating fom dom for a imageCarousel
+    else if (params.SliderType === "imageCarousel") {
+      var $slidercontainer = $('<div id="h5p-ps-slidercontainer"></div>');
+      $slider.append($slidercontainer);
+      for (var i = 0; i < params.images.length; i++) {
+        $slidercontainer.append($('<img src="' + cp + params.images[i].image.path + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/>'));
+      }
+    }
+// TODO: NOT IMPLEMENTED IN H5P EDITOR YET
+// creating fom dom for a listCarousel
+    else if (params.SliderType === "listCarousel") {
+      var $slidercontainer = $('<ul id="h5p-ps-slidercontainer"></ul>');
+      $slider.append($slidercontainer);
+      for (var i = 0; i < params.images.length; i++) {
+        $slidercontainer.append($('<li><img src="' + cp + params.images[i].image.path + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div></li>'));
+      }
+    }
+    $slider.append($('<div class="h5p-ps-clearfix"></div>'));
+    // check if pagination is set
+    if (params.settings.pagination) {
+//creating paginationbar
+      $slider.append($('<div id="h5p-ps-pager"></div>'));
+    }
 
-    // Making a shorcut path to the content
-    var cp = H5P.getContentPath(contentId);
-
-    //Setting default values
-    var defaults = {
-        "title": "Picture Slider",
-        "SliderType": "html_carousel",
-        "image": "",
-        "action": "",
-        "width": "600",
-        "height": "400",
-        "settings": {
-            "infinite": true,
-            "responsive": false,
-            "circular": "true",
-            "direction": "up",
-            "align": "center",
-            "padding": null,
-            "synchronise": null,
-            "cookie": false,
-            "items": 1,
-            "pagination": "true",
-            "scroll": {
-                "fx": "crossfade",
-                "items": "1",
-                "duration": 3000
-            },
-            "auto": {
-                "play": true,
-                "items": "1",
-                "duration": 1000,
-                "pauseOnHover": true
-            }
+    $myDom.append($slider);
+    //Setting Picture Slider properties
+    $(function() {
+      $("#h5p-ps-slidercontainer").carouFredSel({
+        circular: params.settings.circular,
+        infinite: params.settings.infinite,
+        responsive: params.settings.responsive,
+        direction: params.settings.direction,
+        align: params.settings.align,
+        padding: params.settings.padding,
+        synchronise: params.settings.synchronise,
+        cookie: params.settings.cookie,
+        items: "variable",
+        scroll: {
+          fx: params.settings.scroll.fx,
+          items: params.settings.scroll.items,
+          duration: params.settings.scroll.duration
         },
-    };
-
-    // setting all the paramters into one variable
-    var params = $.extend({}, defaults, params);
-
-    var $myDom;
-
-    /**
-     * Attach the Picture Slider html to a given target
-     * 
-     * @param {string|jquery} target
-     *  Where the H5P html should be placed
-     */
-    this.attach = function(target) {
-        var that = this;
-
-        // Make sure we have a jquery object
-        $myDom = typeof target === 'string' ? $('#' + target) : target;
-
-        $myDom.html('<div class="h5p-picture-slider"></div>');
-
-        //Adding the Picture Slider
-        // Render Picture Slider DOM elements
-        var $slider = $('<div class="h5p-' + params.SliderType + '"></div>');
-
-        //Setting image with and height
-        var as_imagewidth = params.width;
-        var as_imageheight = params.height - 35;
-
-        // creating fom dom for a html_carousel
-        if (params.SliderType === "html_carousel") {
-            var $slidercontainer = $('<div id="h5p-slidercontainer"></div>');
-            $slider.append($slidercontainer);
-            for (var i = 0; i < params.images.length; i++) {
-                if ((!params.images[i].header) && (!params.images[i].text)) {
-                    $slidercontainer.append($('<div class="h5p-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div></div></div>'));
-                } else if ((!params.images[i].header) && (params.images[i].text)) {
-                    $slidercontainer.append($('<div class="h5p-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div class="h5p-imageinfo"><h4></h4><p>' + params.images[i].text + '</p></div></div>'));
-                } else if ((params.images[i].header) && (!params.images[i].text)) {
-                    $slidercontainer.append($('<div class="h5p-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div class="h5p-imageinfo"><h4>' + params.images[i].header + '</h4><p></p></div></div>'));
-                } else {
-                    $slidercontainer.append($('<div class="h5p-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div class="h5p-imageinfo"><h4>' + params.images[i].header + '</h4><p>' + params.images[i].text + '</p></div></div>'));
-                }
-            }
+        pagination: {
+          container: '#h5p-ps-pager',
+          duration: 0,
+          anchorBuilder: params.settings.pagination,
+          keys: true,
+          deviation: -1
+        },
+        auto: {
+          play: params.settings.auto.play,
+          itema: params.settings.auto.items,
+          duration: params.settings.auto.duration,
+          pauseOnHover: params.settings.auto.pauseOnHover
         }
-        // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
-        // creating fom dom for a image_carousel
-        else if (params.SliderType === "image_carousel") {
-            var $slidercontainer = $('<div id="h5p-slidercontainer"></div>');
-            $slider.append($slidercontainer);
-            for (var i = 0; i < params.images.length; i++) {
-                $slidercontainer.append($('<img src="' + cp + params.images[i].image.path + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/>'));
-            }
-        }
-        // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
-        // creating fom dom for a list_carousel
-        else if (params.SliderType === "list_carousel") {
-            var $slidercontainer = $('<ul id="h5p-slidercontainer"></ul>');
-            $slider.append($slidercontainer);
-            for (var i = 0; i < params.images.length; i++) {
-                $slidercontainer.append($('<li><img src="' + cp + params.images[i].image.path + '" width="' + as_imagewidth + '" height="' + as_imageheight + '"/><div></li>'));
-            }
-        }
-        $slider.append($('<div class="h5p-clearfix"></div>'));
-
-        // check if pagination is set
-        if (params.settings.pagination) {
-            //creating paginationbar
-            $slider.append($('<div id="h5p-pager"></div>'));
-        }
-
-        $myDom.append($slider);
-
-        //Setting Picture Slider properties
-        $(function() {
-            $("#h5p-slidercontainer").carouFredSel({
-                circular: params.settings.circular,
-                infinite: params.settings.infinite,
-                responsive: params.settings.responsive,
-                direction: params.settings.direction,
-                align: params.settings.align,
-                padding: params.settings.padding,
-                synchronise: params.settings.synchronise,
-                cookie: params.settings.cookie,
-                items: params.settings.items,
-                scroll: {
-                    fx: params.settings.scroll.fx,
-                    items: params.settings.scroll.items,
-                    duration: params.settings.scroll.duration
-                },
-                pagination: {
-                    container: '#h5p-pager',
-                    anchorBuilder: params.settings.pagination
-                },
-                auto: {
-                    play: params.settings.auto.play,
-                    itema: params.settings.auto.items,
-                    duration: params.settings.auto.duration,
-                    pauseOnHover: params.settings.auto.pauseOnHover
-                }
-            }).find(".h5p-slide").hover(
-                    function() {
-                        $(this).find("div").slideDown();
-                    },
-                    function() {
-                        $(this).find("div").slideUp();
-                    }
-            );
-        });
-
-        return this;
-    };
-
-
+      }).find(".h5p-ps-slide").hover(
+              function() {
+                $(this).find("div").slideDown();
+              },
+              function() {
+                $(this).find("div").slideUp();
+              }
+      );
+    });
+    return this;
+  };
 };
