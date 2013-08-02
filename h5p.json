@@ -7,7 +7,7 @@
   "license": "MIT",
   "mainLibrary": "H5P.PictureSlider",
   "preloadedDependencies": [
-    {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 0}
+    {"machineName": "H5P.PictureSlider", "majorVersion": 1, "minorVersion": 1}
   ],
   "init": "H5P.PictureSlider",
   "embedTypes": ["div"]

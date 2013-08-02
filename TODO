@@ -7,13 +7,15 @@ EXTERNAL:
 ----------------------------------------------------------------------
 FIXED:
 
-I1: Infinite should be set to true as default
-E4: Bug: H4 tag beeing used
+
+V1.1
+I1: Infinite should be set to true as default E4: Bug: H4 tag beeing used
 E6: Bug: Transition always between the previous picture and the next
 E5: Bug?: Both title and header
 E1: Bug: Coding standards (camelcase and 2 spaces)
 E3: Bug: The last image in the editor is the first image in slider
 E2: Possible improvements
+
 
 
 
