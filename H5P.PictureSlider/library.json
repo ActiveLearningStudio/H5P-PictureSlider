@@ -3,7 +3,7 @@
   "description": "Simple Picture Slider - H5P",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 2,
+  "patchVersion": 3,
   "runnable": 1,
   "machineName": "H5P.PictureSlider",
   "preloadedDependencies": [

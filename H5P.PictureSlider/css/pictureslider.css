@@ -31,7 +31,7 @@
   position: absolute;
   bottom: 4px;
 }
-.h5p-ps-html_carousel div.h5p-ps-slide h4 {
+.h5p-ps-html_carousel div.h5p-ps-slide h2 {
   font-size: 35px;
   padding: 10px 0 0 100px;
 }
@@ -39,7 +39,7 @@
   font-size: 16px;
   padding: 10px 0 30px 100px;
 }
-.h5p-ps-html_carousel div.h5p-ps-slide h4, .h5p-ps-html_carousel div.h5p-ps-slide p {
+.h5p-ps-html_carousel div.h5p-ps-slide h2, .h5p-ps-html_carousel div.h5p-ps-slide p {
   color: white;
   margin: 0;
 }
@@ -101,18 +101,3 @@
 #h5p-ps-pager a span {
   display: none;
 } 
-#h5p-ps-h4 {
-  color: white;
-  margin: 0px;
-  font-size: 35px;
-  padding: 10px 0px 0px 100px;
-  font-family: sans-serif;
-  font-weight: normal;
-  
-}
-#h5p-ps-p {
-  color: white;
-  margin: 0px;
-  font-family: sans-serif;
-  font-weight: normal;
-}

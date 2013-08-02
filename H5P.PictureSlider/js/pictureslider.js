@@ -92,11 +92,11 @@ H5P.PictureSlider = function(params, contentId) {
         if ((!params.images[i].header) && (!params.images[i].text)) {
           $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div></div></div>'));
         } else if ((!params.images[i].header) && (params.images[i].text)) {
-          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4"></h4><p class="h5p-ps-p">' + params.images[i].text + '</p></div></div>'));
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h2></h2><p>' + params.images[i].text + '</p></div></div>'));
         } else if ((params.images[i].header) && (!params.images[i].text)) {
-          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4">' + params.images[i].header + '</h4><p class="h5p-ps-p"></p></div></div>'));
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h2">' + params.images[i].header + '</h2<p></p></div></div>'));
         } else {
-          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h4 class="h5p-ps-h4">' + params.images[i].header + '</h4><p class="h5p-ps-p">' + params.images[i].text + '</p></div></div>'));
+          $slidercontainer.append($('<div class="h5p-ps-slide"><img src="' + cp + params.images[i].image.path + '" alt="carousel ' + i + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div class="h5p-ps-imageinfo"><h2>' + params.images[i].header + '</h2><p>' + params.images[i].text + '</p></div></div>'));
         }
       }
     }
