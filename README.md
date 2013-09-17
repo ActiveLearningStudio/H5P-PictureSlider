@@ -1,4 +1,4 @@
-h5p-picture-slider
+Picture Slider
 ==================
 
 A H5P (HTML5) slider of images.
