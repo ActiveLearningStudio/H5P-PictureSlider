@@ -80,11 +80,11 @@
   float: none;
   clear: both;
 }
-#h5p-ps-pager {
+.h5p-ps-pager {
   text-align: center;
-  padding-top: 10px;    
+  padding-top: 10px;
 }
-#h5p-ps-pager a {
+.h5p-ps-pager a {
   background: #ccc;
   display: inline-block;
   border-radius: 5px;
@@ -92,12 +92,12 @@
   height: 10px;
   margin: 0 2px;
 }
-#h5p-ps-pager a.selected {
+.h5p-ps-pager a.selected {
   background: #999;
 }
-#h5p-ps-pager a:hover {
+.h5p-ps-pager a:hover {
   background: #666;
 }
-#h5p-ps-pager a span {
+.h5p-ps-pager a span {
   display: none;
 } 
