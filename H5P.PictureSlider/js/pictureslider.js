@@ -30,7 +30,7 @@ H5P.PictureSlider = function(params, contentId) {
   // Get the newest jquery from H5P
   var $ = H5P.jQuery;
   // Making a shorcut path to the content
-  var cp = H5P.getContentPath(contentId);
+  var cp = H5P.getContentPath(contentId)+'/';
   //Setting default values
   var defaults = {
     "SliderType": "html_carousel",
