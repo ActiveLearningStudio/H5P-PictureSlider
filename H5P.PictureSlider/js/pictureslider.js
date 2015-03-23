@@ -62,7 +62,7 @@ H5P.PictureSlider = function(params, contentId) {
     },
   };
   // setting all the paramters into one variable
-  var params = $.extend({}, defaults, params);
+  params = $.extend({}, defaults, params);
   var $myDom;
   /**
    * Attach the Picture Slider html to a given target
@@ -84,8 +84,9 @@ H5P.PictureSlider = function(params, contentId) {
     var asImageHeight = params.height - 35;
     // creating fom dom for a html_carousel
 
+    var i;
     if (params.SliderType === "html_carousel") {
-      for (var i = 0, length = params.images.length; i < length; i++) {
+      for (i = 0, length = params.images.length; i < length; i++) {
         var $infoView = (params.images[i].header ? '<h2>' + params.images[i].header + '</h2>' : '') +
         (params.images[i].text ? '<p>' + params.images[i].text + '</p>' : '' ) + '</div>';
 
@@ -96,14 +97,14 @@ H5P.PictureSlider = function(params, contentId) {
     // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
     // creating fom dom for a imageCarousel
     else if (params.SliderType === "imageCarousel") {
-      for (var i = 0, length = params.images.length; i < length; i++) {
+      for (i = 0, length = params.images.length; i < length; i++) {
         $slidercontainer.append($('<img src="' + H5P.getPath(params.images[i].image.path, contentId) + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/>'));
       }
     }
     // TODO: NOT IMPLEMENTED IN H5P EDITOR YET
     // creating fom dom for a listCarousel
     else if (params.SliderType === "listCarousel") {
-      for (var i = 0, length = params.images.length; i < length; i++) {
+      for (i = 0, length = params.images.length; i < length; i++) {
         $slidercontainer.append($('<li><img src="' + H5P.getPath(params.images[i].image.path, contentId) + '" width="' + asImageWidth + '" height="' + asImageHeight + '"/><div></li>'));
       }
     }
